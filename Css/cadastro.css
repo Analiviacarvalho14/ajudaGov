@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #003366;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.search-bar input {
+    width: 350px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1.5px solid #797979;
+    font-size: 1rem;
+    outline: none;
+}
+
+.botao-cadastrar {
+    background-color: #2862ab;
+    color: white;
+    border: none;
+    padding: 15px 80px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.botao-cadastrar:hover {
+    background-color: #2862ab;
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .sidebar {
+        width: 90%;
+    }
+    .grid-ongs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header {
+        flex-direction: column; 
+        gap: 15px;
+    }
+    .search-bar input {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-ongs {
+        grid-template-columns: 1fr;
+    }
+    .main-title {
+        font-size: 1.2rem;
+    }
+    header {
+        padding: 15px;
+    }
+}

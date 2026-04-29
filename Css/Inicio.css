@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.boas-vindas-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.coluna-foto {
+    width: 20%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.lateral-esquerda {
+    background-image: url('../IMG/fotomaos.jpeg');
+    border-radius: 0 50px 50px 0;
+}
+
+.lateral-direita {
+    background-image: url('../IMG/segurandoomundo.jpg');
+    border-radius: 50px 0 0 50px;
+}
+
+.conteudo-principal {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.logo-img {
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+.linha-decorativa {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #007bff, transparent);
+    margin: 20px auto;
+    width: 200px;
+}
+
+.botao-entrar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 80px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.botao-entrar:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.botao-cadastrar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 80px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.botao-cadastrar:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
