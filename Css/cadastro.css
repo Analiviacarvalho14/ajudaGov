@@ -24,25 +24,41 @@ header {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.search-bar input {
-    width: 350px;
-    padding: 10px 25px;
-    border-radius: 30px;
-    border: 1.5px solid #797979;
-    font-size: 1rem;
-    outline: none;
+.main-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c5282;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.aba-cadastro {
+    background-color: white;
+    margin-left: 20px;
+    margin-bottom: -20px;
+    height: 500px;
+    width: 400px;
+    color: #2862ab;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    justify-items: center;
 }
 
 .botao-cadastrar {
     background-color: #2862ab;
     color: white;
     border: none;
+    width: 300px;
     padding: 15px 80px;
     font-size: 20px;
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin-top: 400px;
 }
 
 .botao-cadastrar:hover {

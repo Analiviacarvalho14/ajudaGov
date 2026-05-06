@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajuda Gov - Mockup</title>
     <link rel="stylesheet" href="../CSS/paginaDeEntrada.css">
 </head>
+
 <body>
 
-    <!-- Cabeçalho -->
     <header>
         <img src="../IMG/logoAjudaGov.png" width="150" height="60">
         <div class="search-bar">
@@ -19,35 +20,51 @@
 
     <main>
         <h2 class="main-title">APOIO E CONEXÃO PARA VOCÊ</h2>
-        
+
+        <div class="caixa-busca-centro">
+            <div class="barra-busca">
+                <input type="text" id="campo-digitar" placeholder="Pesquisa ONG" autocomplete="off">
+            </div>
+
+            <ul id="lista-sugestoes" class="lista-opcoes">
+                <li onclick="location.href='saude.html'">🕒 Saúde</li>
+                <li onclick="location.href='doacao.html'">🕒 Doação</li>
+                <li onclick="location.href='cadastro.html'">🕒 Cadastrar</li>
+            </ul>
+        </div>
+
+
         <div class="container">
-            <!-- Barra Lateral -->
+
             <aside class="sidebar">
-                <section>
+
+                <section class="filter-group">
                     <h3>Categorias</h3>
                     <ul>
-                        <li>Saúde ❤️</li>
-                        <li>Crianças 🧒</li>
-                        <li>Idosos 👴</li>
-                        <li>Animais 🐾</li>
+
+                        <li><a href="saude.html">Saúde ❤️</a></li>
+                        <li><a href="criancas.html">Crianças 🧒</a></li>
+                        <li><a href="idosos.html">Idosos 👴</a></li>
+                        <li><a href="animais.html">Animais 🐾</a></li>
                     </ul>
                 </section>
-                <section>
+
+                <section class="filter-group">
                     <h3>Regiões</h3>
                     <ul>
-                        <li>Norte</li>
-                        <li>Nordeste</li>
-                        <li>Centro-oeste</li>
-                        <li>Sudeste</li>
-                        <li>Sul</li>
+                        <li><a href="norte.html">Norte</a></li>
+                        <li><a href="nordeste.html">Nordeste</a></li>
+                        <li><a href="centro-oeste.html">Centro-oeste</a></li>
+                        <li><a href="sudeste.html">Sudeste</a></li>
+                        <li><a href="sul.html">Sul</a></li>
                     </ul>
                 </section>
             </aside>
 
-            <!-- Grade de ONGs -->
+
             <section class="content">
                 <div class="grid-ongs">
-                    <!-- Exemplo de Card (Repetir 6x) -->
+
                     <div class="card-ong">
                         <div class="card-header">👤 ONG 1</div>
                         <p>Descrição da ONG</p>
@@ -79,4 +96,5 @@
     </main>
 
 </body>
+
 </html>

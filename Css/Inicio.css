@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
+    overflow: hidden;
 }
 
 .boas-vindas-container {
@@ -22,19 +23,20 @@ body {
 }
 
 .coluna-foto {
-    width: 20%;
+    width: 30%;
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .lateral-esquerda {
-    background-image: url('../IMG/fotomaos.jpeg');
+    background-image: url('../IMG/pessoasUnidas.webp');
     border-radius: 0 50px 50px 0;
 }
 
 .lateral-direita {
-    background-image: url('../IMG/segurandoomundo.jpg');
+    background-image: url('../IMG/mundo\ \(2\).webp'); 
     border-radius: 50px 0 0 50px;
 }
 
@@ -46,6 +48,7 @@ body {
 
 .logo-img {
     max-width: 300px;
+    height: auto; 
     margin-bottom: 10px;
 }
 
@@ -56,36 +59,21 @@ body {
     width: 200px;
 }
 
-.botao-entrar {
+.botao-entrar, .botao-cadastrar {
     background-color: #4caf50;
     color: white;
     border: none;
-    padding: 15px 80px;
+    padding: 15px 60px;
     font-size: 20px;
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+    width: 300px; 
 }
 
-.botao-entrar:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-.botao-cadastrar {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 15px 80px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.botao-cadastrar:hover {
+.botao-entrar:hover, .botao-cadastrar:hover {
     background-color: #45a049;
     transform: scale(1.05);
 }

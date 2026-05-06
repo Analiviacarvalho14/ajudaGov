@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     const botaoEntrar = document.getElementById('btnEntrar');
-
-    botaoEntrar.addEventListener('click', () => {
-        
-        botaoEntrar.innerText = "CARREGANDO...";
-        botaoEntrar.style.opacity = "0.7";
-
-        setTimeout(() => {
-            window.location.href = "dashboard.html"; 
-        }, 1000);
-        
-    });
-
     const botaoCadastrar = document.getElementById('btnCadastrar');
 
-    botaoCadastrar.addEventListener('click', () => {
+    function navegarPara(botao, destino) {
+        botao.disabled = true;
         
-        botaoCadastrar.innerText = "CARREGANDO...";
-        botaoCadastrar.style.opacity = "0.7";
+        botao.innerText = "CARREGANDO...";
+        botao.style.opacity = "0.7";
+        botao.style.cursor = "not-allowed";
 
         setTimeout(() => {
-            window.location.href = "dashboard.html"; 
+            window.location.href = destino; 
         }, 1000);
-        
-    });
+    }
 
+    if(botaoEntrar) {
+        botaoEntrar.addEventListener('click', () => {
+            navegarPara(botaoEntrar, "HTML/login.html"); 
+        });
+    }
+
+    if(botaoCadastrar) {
+        botaoCadastrar.addEventListener('click', () => {
+            navegarPara(botaoCadastrar, "HTML/cadastro.html"); 
+        });
+    }
 });
