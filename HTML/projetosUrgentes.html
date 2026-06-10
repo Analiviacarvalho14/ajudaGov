@@ -1,83 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajuda Gov - Mockup</title>
+    <title>Ajuda GOV - Projetos Urgentes</title>
     <link rel="stylesheet" href="../CSS/projetosUrgentes.css">
+    <link rel="stylesheet" href="../Css/rodapeGov.css">
 </head>
-
 <body>
 
-    <header>
-        <img src="../IMG/logoAjudaGov.png" width="150" height="60">
-        <div class="search-bar">
+    <header class="topo">
+        <img src="../IMG/logoAjudaGov.png" width="150" height="60" alt="Logo Ajuda Gov">
+        <div class="busca">
             <input type="text" placeholder="Pesquisa ONG">
         </div>
-        
-        <div class="user-menu">Entre na sua conta 👤</div>
+        <div class="usuario">Entre na sua conta 👤</div>
     </header>
 
     <main>
-        <h2 class="main-title">PROJETOS URGENTES</h2>
+        <h2 class="titulo">PROJETOS URGENTES</h2>
 
-        <div class="container">
+        <div class="caixa-principal">
+            <!-- BARRA LATERAL COM LEGENDA -->
+            <aside class="lateral">
+                <section class="legenda">
+                    <h3>Legenda</h3>
+                    <ul>
+                        <li>🔴 Perigo imediato</li>
+                        <li>🟠 Perigo</li>
+                        <li>🟡 Atenção</li>
+                        <li>🟢 Contido</li>
+                    </ul>
+                </section>
+            </aside>
 
-
-                <aside class="sidebar">
+            <!-- CONTEÚDO DOS CARDS -->
+            <section class="conteudo">
+                <div class="lista-cards">
                     
-
-                    <section class="filter-group">
-                        <h3>Legenda</h3>
-                        <ul>
-
-                            <li>🔴 Perigo imediato</li>
-                            <li>🟠 Perigo</li>
-                            <li>🟡 Atenção</li>
-                            <li>🟢 Contido</li>
-                        </ul>
-                    </section>
-
-                </aside>
-
-
-                <section class="content">
-                    <div class="grid-ongs">
-
-                        <div class="card-ong">
-                            <div class="card-header">
-                                <div class=".card-red">👤 ONG 1</div>
-                                </div>
-                            <p>Descrição da ONG</p>
+                    <!-- CARD 1: Vermelho -->
+                    <div class="card card-vermelho">
+                        <div class="card-icone">🏠</div>
+                        <div class="card-info">
+                            <strong>ONG Amigos do Bem</strong>
+                            <span>Descrição detalhada sobre o projeto de ajuda comunitária.</span>
                         </div>
-                        <div class="card-ong">
-                            <div class="card-header">👤 ONG 2</div>
-                            <p>Descrição da ONG</p>
-                        </div>
-                        <div class="card-ong">
-                            <div class="card-header">👤 ONG 3</div>
-                            <p>Descrição da ONG</p>
-                        </div>
-                        <div class="card-ong">
-                            <div class="card-header">👤 ONG 4</div>
-                            <p>Descrição da ONG</p>
-                        </div>
-                        <div class="card-ong">
-                            <div class="card-header">👤 ONG 5</div>
-                            <p>Descrição da ONG</p>
-                        </div>
-                        <div class="card-ong">
-                            <div class="card-header">👤 ONG 6</div>
-                            <p>Descrição da ONG</p>
+                        <div class="card-necessidades">
+                            <small>NECESSIDADES:</small>
+                            <p>Roupa, dinheiro, comida</p>
                         </div>
                     </div>
-                    <h3 class="urgent-projects">Projetos urgentes</h3>
-                </section>
-            </div>
+
+                    <!-- CARD 2: Laranja -->
+                    <div class="card card-laranja">
+                        <div class="card-icone">🏠</div>
+                        <div class="card-info">
+                            <strong>ONG Resgate Esperança</strong>
+                            <span>Apoio a famílias afetadas por desastres climáticos locais.</span>
+                        </div>
+                        <div class="card-necessidades">
+                            <small>NECESSIDADES:</small>
+                            <p>Roupa, dinheiro, comida</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3: Amarelo -->
+                    <div class="card card-amarelo">
+                        <div class="card-icone">🏠</div>
+                        <div class="card-info">
+                            <strong>Instituto Viva Vida</strong>
+                            <span>Distribuição de mantimentos e suporte básico essencial.</span>
+                        </div>
+                        <div class="card-necessidades">
+                            <small>NECESSIDADES:</small>
+                            <p>Roupa, dinheiro, comida</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4: Verde -->
+                    <div class="card card-verde">
+                        <div class="card-icone">🏠</div>
+                        <div class="card-info">
+                            <strong>ONG Natureza Viva</strong>
+                            <span>Monitoramento de áreas e suporte de prevenção contínuo.</span>
+                        </div>
+                        <div class="card-necessidades">
+                            <small>NECESSIDADES:</small>
+                            <p>Voluntários, ferramentas</p>
+                        </div>
+                    </div>
+
+                </div>
+                <h3 class="rodape-lista">Projetos urgentes</h3>
+            </section>
         </div>
     </main>
 
-</body>
+        <footer class="rodape-gov">
+        <div class="container-rodape">
+            <div class="coluna-logo">
+                <h1 class="logo-gov">gov.br</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>SERVIÇOS</h2>
+                <ul>
+                    <li><a href="/buscar-servicos">Buscar serviços por</a></li>
+                    <li><a href="/servicos-publico">Serviços por público alvo</a></li>
+                </ul>
+            </div>
+            <div class="coluna-links">
+                <h2>TEMAS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="/orcamento">Orçamento Nacional</a></li>
+                    <li><a href="/redes-atendimento">Redes de Atendimento</a></li>
+                    <li><a href="/lgpd">Proteção de Dados Pessoais</a></li>
+                </ul>
+            </div>
+            <div class="coluna-links">
+                <h2>NOTÍCIAS</h2>
+                <ul>
+                    <li><a href="/noticias-saude">Saúde</a></li>
+                    <li><a href="/noticias-ciencia">Ciência e Tecnologia</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/projetosUrgentes.js"></script>
 
+</body>
 </html>

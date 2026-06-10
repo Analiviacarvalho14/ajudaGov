@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(botaoEntrar) {
         botaoEntrar.addEventListener('click', () => {
-            navegarPara(botaoEntrar, "HTML/login.html"); 
+            navegarPara(botaoEntrar, "paginaDeEntrada.html"); 
         });
     }
 
     if(botaoCadastrar) {
         botaoCadastrar.addEventListener('click', () => {
-            navegarPara(botaoCadastrar, "HTML/cadastro.html"); 
+            navegarPara(botaoCadastrar, "login.html"); 
         });
     }
 });

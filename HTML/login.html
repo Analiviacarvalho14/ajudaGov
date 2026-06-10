@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Ajuda Gov</title>
+  <link rel="stylesheet" href="../Css/Login.css">
+</head>
+<body>
+
+  <div class="conteudo-pagina">
+    
+    <img src="../IMG/logoAjudaGov.png" alt="Ajuda Gov" class="logo-principal">
+
+    <div class="cartao-login">
+      <div class="titulo-user">
+        USER
+      </div>
+
+      <div class="caixa-entrada">
+        <div class="campo">
+          <label>Nome:</label>
+          <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+        
+        <div class="campo">
+          <label>Login:</label>
+          <input type="text" id="login" placeholder="Seu login">
+        </div>
+        
+        <div class="campo">
+          <label>Senha:</label>
+          <input type="password" id="senha" placeholder="Mínimo 8 caracteres" oninput="validarSenha()">
+        </div>
+
+        <div id="caixa-validacao">
+          <p id="regra-especial" class="regra">❌ Um caractere especial (@, #, $, !)</p>
+          <p id="regra-tamanho" class="regra">❌ No mínimo 8 caracteres</p>
+        </div>
+
+        <div class="rodape-ajuda">
+          <a href="#">Ajuda</a>
+        </div>
+
+        <button class="botao-entrar" onclick="tentarEntrar()">Entrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../JS/Login.js"></script>
+</body>
+</html>

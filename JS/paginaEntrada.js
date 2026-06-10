@@ -10,4 +10,3 @@ document.addEventListener('click', (evento) => {
         lista.style.display = 'none';
     }
 });
-

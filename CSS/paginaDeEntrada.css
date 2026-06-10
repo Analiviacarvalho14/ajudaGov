@@ -1,349 +1,289 @@
-/* ==========================================
-   VAVRIÁVEIS E CONFIGURAÇÕES GERAIS
-   ========================================== */
-:root {
-    --vermelho-perigo: #ff4d4d;
-    --laranja-perigo: #ff8c42;
-    --amarelo-atencao: #ffcc00;
-    --cinza-fundo: #f5f5f5;
-    --azul-escuro: #003366;
-    --azul-destaque: #2c5282;
-    --azul-card: #2c6eb5;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background-color: #ffffff;
-    color: var(--azul-escuro);
+    background-color: #f8f9fa;
 }
 
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    gap: 30px;
-}
-
-/* ==========================================
-   1. TOPO DA PÁGINA (HEADER & BUSCA)
-   ========================================== */
-header{
+/* --- TOPO (Ocupando toda a largura da tela) --- */
+.barra-topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 15px 40px; /* Aumentado o espaçamento nas pontas */
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%; /* Ocupa tudo */
 }
 
-.busca {
-    position: relative;
-    width: 350px;
+.topo-logo img {
+    max-height: 55px; /* Logo ligeiramente maior */
+    width: auto;
 }
 
-.busca-input input {
-    width: 100%;
-    padding: 10px 25px;
-    border-radius: 30px;
-    border: 1.5px solid #000;
-    font-size: 1rem;
-    outline: none;
-    box-sizing: border-box;
-}
-
-.sugestoes {
-    display: none; 
-    position: absolute;
-    top: 100%;    
-    left: 0;
-    width: 100%;
-    background: white;
-    border: 1px solid #ccc;
-    border-top: none; 
-    border-radius: 0 0 20px 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    z-index: 999; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.sugestoes li {
-    padding: 12px;
-    cursor: pointer;
-    text-align: center;
-    font-style: italic;
-    color: #555;
-    border-bottom: 1px solid #000000;
-    transition: all 0.3s ease;
-}
-
-.sugestoes li:hover {
-    background-color: #f5f5f5;
-    color: var(--azul-card);
-    transform: scale(1.03);
-}
-
-.user-menu {
-    font-weight: 500;
-    cursor: pointer;
-}
-
-hr {
-    border: none;           
-    height: 1px;         
-    background-color: #eee;   
-    margin: 0;            
-}
-
-/* ==========================================
-   2. CONTEÚDO PRINCIPAL (MAIN & ASIDE)
-   ========================================== */
-.titulo-principal {
-    text-align: center;
-    margin: 40px 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--azul-destaque);
-}
-
-.sidebar {
-    width: 220px;
-    flex-shrink: 0;
-}
-
-.filtro {
-    background-color: rgba(245, 247, 249, 0.7); 
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.filtro h3 {
-    margin: 0 0 15px 0;
-    font-size: 1.2rem;
-    color: var(--azul-destaque);
-    text-align: center; 
-}
-
-.filtro ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.filtro li {
-    padding: 8px 0;
-    font-size: 0.95rem;
+.campo-busca {
     display: flex;
     align-items: center;
+    border: 1px solid #a0a0a0;
+    border-radius: 25px;
+    padding: 8px 20px;
+    width: 380px; /* Barra de pesquisa mais larga e imponente */
+    background-color: #ffffff;
 }
 
-.filtro li::before {
-    content: "•";
-    color: var(--azul-destaque);
+.icone-busca {
     margin-right: 10px;
+    color: #666;
+    font-size: 16px;
+}
+
+.campo-busca input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.topo-usuario a {
+    text-decoration: none;
+    color: #2264b1;
+    font-size: 14px; /* Link de entrar maior */
+    font-weight: 500;
+}
+
+/* --- TÍTULO --- */
+.titulo-pagina {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.titulo-pagina h1 {
+    font-size: 18px;
+    color: #002d62;
+    letter-spacing: 0.5px;
     font-weight: bold;
 }
 
-.filtro a {
-    text-decoration: none; 
-    color: var(--azul-escuro); 
-    display: block;
-    width: 100%;
+/* --- ESTRUTURA MEIO-TERMO (Aumentado para 1440px) --- */
+.layout-principal {
+    display: flex;
+    max-width: 1440px; /* Meio-termo perfeito entre o gigante e o pequeno */
+    margin: 0 auto;    /* Centraliza na tela */
+    padding: 0 40px 50px 40px;
+    gap: 35px;         
+}
+
+/* --- BARRA LATERAL --- */
+.barra-lateral {
+    width: 200px;      
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bloco-filtro {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.bloco-filtro h2 {
+    font-size: 14px;
+    color: #2264b1;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 6px;
+    font-weight: bold;
+}
+
+.bloco-filtro ul {
+    list-style: none;
+}
+
+.bloco-filtro ul li {
+    font-size: 13px;
+    color: #444;
+    padding: 6px 0;
     cursor: pointer;
-    transition: all 0.3s ease; 
 }
 
-.filtro a:hover {
-    color: var(--azul-card);
-    transform: scale(1.1); 
-    transform-origin: left; 
-}
-.linha-vertical {
-    width: 2px;
-    background-color: #eee; 
-    align-self: stretch; 
-    margin: 0 10px; 
-}
-
-/* ==========================================
-   3. GRID DE ONGS
-   ========================================== */
-.conteudo {
+/* --- CONTEÚDO CENTRAL --- */
+.conteudo-grid {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
+/* GRID DE ONGS (Ajustado para o novo tamanho) */
 .grid-ongs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-bottom: 40px;
 }
 
 .card-ong {
-    background-color: var(--azul-card);
+    background-color: #2264b1;
     color: white;
-    padding: 25px;
-    border-radius: 25px;
-    min-height: 120px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 35px 20px; 
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
-.card-ong:hover {
-    transform: scale(1.05);
-}
-
-.card-header {
-    font-size: 1.4rem;
-    font-weight: bold;
+.ong-avatar {
+    font-size: 22px;
+    display: block;
     margin-bottom: 10px;
 }
 
-/* ==========================================
-   4. SEÇÃO DE PROJETOS URGENTES
-   ========================================== */
-.projetos-urgentes {
-    text-align: center;
-    width: 100%;               
-    padding-top: 30px;         
-    margin-top: 40px;         
-    font-size: 1.3rem;
+.card-ong h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
 }
 
-.urgentes {
-    margin-top: 20px;
-    padding-bottom: 40px;
+.card-ong p {
+    font-size: 12px;
+    opacity: 0.85;
 }
 
-.sidebar-legenda {
-    width: 220px;
-    flex-shrink: 0;
-}
-
-.lista-legenda {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.lista-legenda li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    font-size: 0.95rem;
-    color: var(--azul-escuro);
-}
-
-.bola {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.bola.vermelho { background: var(--vermelho-perigo); }
-.bola.laranja { background: var(--laranja-perigo); }
-.bola.amarelo { background: var(--amarelo-atencao); }
-
-.conteudo-urgentes {
-    flex: 1;
+/* PROJETOS URGENTES */
+.secao-urgentes {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.titulo-urgentes {
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .card-urgente {
     display: flex;
-    width: 100%;
-    background: white;
-    border-radius: 15px;
-    padding: 15px;
     align-items: center;
-    gap: 20px;
-    border: 3px solid transparent;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border-width: 1.5px;
+    border-style: solid;
 }
 
-.perigo-alto { border-color: var(--vermelho-perigo); box-shadow: 0 0 10px rgba(255, 77, 77, 0.2); }
-.perigo-medio { border-color: var(--laranja-perigo); }
-.perigo-baixo { border-color: var(--amarelo-atencao); }
-
-.info-principal, .info-necessidades {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e2e8f0;
-    padding: 12px;
-    border-radius: 10px;
-    flex: 1;
-    background-color: #fafbfc;
-}
-
-.info-principal strong, .info-necessidades strong {
-    font-size: 14px;
-    margin-bottom: 4px;
-    color: var(--azul-escuro);
-}
-
-.info-principal span, .info-necessidades span {
-    font-style: italic;
-    color: #666;
-    font-size: 13px;
-}
-
-.btn-mais {
-    background-color: var(--azul-card);
+.urgente-icone {
+    font-size: 20px;
+    background-color: #000;
     color: white;
-    border: none;
-    padding: 12px 40px;
-    border-radius: 20px;
-    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.urgente-info {
+    flex: 1;
+}
+
+.urgente-info h4 {
+    font-size: 14px;
+    color: #333;
     font-weight: bold;
-    margin-top: 10px;
-    transition: background 0.2s ease;
 }
 
-.btn-mais:hover {
-    background-color: #1e427a;
+.urgente-info p {
+    font-size: 12px;
+    color: #777;
 }
 
-/* ==========================================
-   5. RESPONSIVIDADE (MEDIA QUERIES)
-   ========================================== */
-@media (max-width: 992px) {
-    .container, .urgentes {
-        flex-direction: column;
-    }
-    .sidebar, .sidebar-legenda {
-        width: 100%;
-    }
-    .grid-ongs {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .card-urgente {
-        flex-direction: column;
-        text-align: center;
-    }
-    .info-principal, .info-necessidades {
-        width: 100%;
-    }
+.urgente-tags {
+    text-align: right;
+    padding-left: 15px;
 }
 
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .busca {
-        width: 100%;
-    }
-    .grid-ongs {
-        grid-template-columns: 1fr;
-    }
+.urgente-tags span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+.urgente-tags p {
+    font-size: 11px;
+    color: #666;
+}
+
+/* Cores das Bordas dos Projetos */
+.borda-vermelha { border-color: #ff4d4d; }
+.borda-laranja-escuro { border-color: #ff8c1a; }
+.borda-laranja-claro { border-color: #ffa366; }
+.borda-amarela { border-color: #ffd11a; }
+
+/* --- RODAPÉ (Ocupando toda a largura) --- */
+.rodape-gov {
+    background-color: #13315C; 
+    color: #FFFFFF;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.container-rodape {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1440px; /* Acompanha o tamanho do meio-termo */
+    margin: 0 auto;
+}
+
+.coluna-links h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.coluna-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.coluna-links li {
+    margin-bottom: 8px;
+}
+
+.coluna-links a {
+    color: #FFFFFF;
+    text-decoration: none; 
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.coluna-links a:hover {
+    text-decoration: underline; 
+    opacity: 1;
+}
+
+.link-card-urgente {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit;        /* Mantém as cores originais do texto */
+    display: block;        /* Faz o link ocupar o tamanho correto do card */
 }

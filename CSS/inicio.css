@@ -14,6 +14,7 @@ body {
     overflow: hidden;
 }
 
+/* Container Principal */
 .boas-vindas-container {
     display: flex;
     width: 100%;
@@ -22,41 +23,56 @@ body {
     justify-content: space-between;
 }
 
+/* Ajuste das Imagens Laterais */
 .coluna-foto {
     width: 30%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
 }
 
 .lateral-esquerda {
-    background-image: url('../IMG/pessoasUnidas.webp');
     border-radius: 0 50px 50px 0;
 }
 
 .lateral-direita {
-    background-image: url('../IMG/mundo\ \(2\).webp'); 
     border-radius: 50px 0 0 50px;
 }
 
+/* Conteúdo Central */
 .conteudo-principal {
     text-align: center;
     flex: 1;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-area {
+    margin-bottom: 30px;
 }
 
 .logo-img {
     max-width: 300px;
     height: auto; 
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 .linha-decorativa {
     height: 2px;
     background: linear-gradient(to right, transparent, #007bff, transparent);
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     width: 200px;
+}
+
+/* Área dos Botões */
+.botoes-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Substitui a necessidade de usar <br> no HTML */
 }
 
 .botao-entrar, .botao-cadastrar {
@@ -69,11 +85,17 @@ body {
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin: 10px 0;
     width: 300px; 
+    display: inline-block;
+    outline: none;
 }
 
 .botao-entrar:hover, .botao-cadastrar:hover {
     background-color: #45a049;
     transform: scale(1.05);
+}
+
+/* Estilo para quando o JavaScript desabilitar o botão */
+.botao-entrar:disabled, .botao-cadastrar:disabled {
+    transform: none !important; /* Evita que o botão aumente no hover se estiver carregando */
 }

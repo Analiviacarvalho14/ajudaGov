@@ -1,4 +1,8 @@
+/* ==========================================================================
+   ESTILOS DA PÁGINA PRINCIPAL (Categorias / Crianças)
+   ========================================================================== */
 
+/* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
@@ -82,14 +86,15 @@ hr {
     color: #ffffff;
 }
 
-/* --- ESTRUTURA DO BLOCO (Mantendo as laterais coladas) --- */
+/* --- ESTRUTURA DO BLOCO (O segredo do erro) --- */
 .bloco-conteudo {
     display: grid;
+    /* Alterado de 250px para ajustar o tamanho da coluna automaticamente ao tamanho da imagem */
     grid-template-columns: auto 1fr auto; 
-    gap: 20px;
+    gap: 20px; /* Espaçamento controlado entre colunas e os cards */
     align-items: start;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 1200px; /* Centraliza o bloco inteiro e traz as laterais para perto */
     margin: 0 auto;
 }
 
@@ -100,15 +105,14 @@ hr {
     gap: 10px;
 }
 
-/* Quadradas e menores */
+/* Força as imagens a ficarem quadradas, menores e organizadas */
 .coluna-imagens img {
-    width: 400px;          
-    height: 400px;         
-    object-fit: cover;     
+    width: 100px;          
+    height: 100px;         
+    object-fit: cover;    
     border-radius: 6px;    
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-
 /* --- LISTA DE ONGS (Coluna Central) --- */
 .lista-ongs {
     display: flex;
@@ -121,7 +125,7 @@ hr {
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    border-left: 6px solid #ccc;
+    border-left: 6px solid #ccc; /* Padrão neutro */
     border-radius: 4px;
     padding: 15px;
     text-decoration: none;
@@ -137,9 +141,9 @@ hr {
 }
 
 /* Cores de Urgência */
-.cartao-ong.urgencia-alta { border-left-color: #df2935; }   
-.cartao-ong.urgencia-media { border-left-color: #e5a93b; }  
-.cartao-ong.urgencia-baixa { border-left-color: #3bceac; }  
+.cartao-ong.urgencia-alta { border-left-color: #df2935; }   /* Vermelho */
+.cartao-ong.urgencia-media { border-left-color: #e5a93b; }  /* Amarelo/Laranja */
+.cartao-ong.urgencia-baixa { border-left-color: #3bceac; }  /* Verde */
 
 .informacoes-principais, 
 .informacoes-extras {
@@ -165,12 +169,12 @@ hr {
     margin-bottom: 4px;
 }
 
-/* Responsividade */
+/* Responsividade para telas menores (Tira as colunas laterais no celular) */
 @media (max-width: 900px) {
     .bloco-conteudo {
         grid-template-columns: 1fr;
     }
     .coluna-imagens {
-        display: none;
+        display: none; /* Esconde as fotos decorativas no mobile para poupar espaço */
     }
 }

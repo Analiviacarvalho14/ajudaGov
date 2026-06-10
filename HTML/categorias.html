@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajuda Gov - Mockup Regiões</title>
-    <link rel="stylesheet" href="../CSS/regioes.css">
+    <title>Ajuda Gov - Mockup</title>
+    <link rel="stylesheet" href="../CSS/categorias.css">
     <link rel="stylesheet" href="../CSS/rodapeGov.css">
 </head>
 
@@ -20,50 +20,57 @@
 
     <main>
         <hr>
-        <h2 class="titulo-principal">Projetos Sociais por Região</h2>
+        <h2 class="titulo-principal">Projetos Sociais e Urgentes</h2>
         <hr>
 
         <nav class="navegacao-categorias">
             <button class="botao-categoria ativo" data-filtro="todos">Todos</button>
-            <button class="botao-categoria" data-filtro="norte">🌳 Norte</button>
-            <button class="botao-categoria" data-filtro="nordeste">☀️ Nordeste</button>
-            <button class="botao-categoria" data-filtro="centro-oeste">🌾 Centro-Oeste</button>
-            <button class="botao-categoria" data-filtro="sudeste">🌆 Sudeste</button>
-            <button class="botao-categoria" data-filtro="sul">❄️ Sul</button>
+            <button class="botao-categoria" data-filtro="crianca">👶 Crianças</button>
+            <button class="botao-categoria" data-filtro="saude">🏥 Saúde</button>
+            <button class="botao-categoria" data-filtro="idoso">👴 Idosos</button>
+            <button class="botao-categoria" data-filtro="animal">🐾 Animais</button>
         </nav>
 
         <div class="bloco-conteudo">
             <aside class="coluna-imagens">
-                <img src="../IMG/regioes do brasil 2.jpg" alt="Ação 1">
-            
+                <img src="../IMG/1saude.jpg" alt="Ação 1">
+                <img src="../IMG/1crianca.jpg" alt="Ação 2">
+                <img src="../IMG/2crianca.jpg" alt="Ação 3">
+                <img src="../IMG/3crianca.jpg" alt="Ação 4">
             </aside>
 
             <section class="lista-ongs">
-                <a href="pagina-ong-crianca.html" class="cartao-ong urgencia-alta" data-regiao="norte">
-                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone ONG">
-                    <div class="informacoes-principais"><strong>Orfanato Esperança</strong><span>Região: Norte</span></div>
+                <a href="pagina-ong-crianca.html" class="cartao-ong urgencia-alta" data-categoria="crianca">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone Criança">
+                    <div class="informacoes-principais"><strong>Orfanato Esperança</strong><span>Categoria: Crianças</span></div>
                     <div class="informacoes-extras"><strong>NECESSIDADE:</strong><span>Arrecadação de leite.</span></div>
                 </a>
 
-                <a href="pagina-ong-saude.html" class="cartao-ong urgencia-media" data-regiao="nordeste">
-                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone ONG">
-                    <div class="informacoes-principais"><strong>Hospital do Bem</strong><span>Região: Nordeste</span></div>
+                <a href="pagina-ong-saude.html" class="cartao-ong urgencia-media" data-categoria="saude">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone Saúde">
+                    <div class="informacoes-principais"><strong>Hospital do Bem</strong><span>Categoria: Saúde</span></div>
                     <div class="informacoes-extras"><strong>INFO:</strong><span>Doação de sangue.</span></div>
                 </a>
 
-                <a href="pagina-ong-idoso.html" class="cartao-ong urgencia-baixa" data-regiao="sudeste">
-                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone ONG">
-                    <div class="informacoes-principais"><strong>Lar dos Avós</strong><span>Região: Sudeste</span></div>
+                <a href="pagina-ong-idoso.html" class="cartao-ong urgencia-baixa" data-categoria="idoso">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone Idoso">
+                    <div class="informacoes-principais"><strong>Lar dos Avós</strong><span>Categoria: Idosos</span></div>
                     <div class="informacoes-extras"><strong>INFO:</strong><span>Voluntários para recreação.</span></div>
                 </a>
 
-                <a href="pagina-ong-animal.html" class="cartao-ong urgencia-alta" data-regiao="sul">
-                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone ONG">
-                    <div class="informacoes-principais"><strong>Peludos e Protegidos</strong><span>Região: Sul</span></div>
+                <a href="pagina-ong-animal.html" class="cartao-ong urgencia-alta" data-categoria="animal">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone Animal">
+                    <div class="informacoes-principais"><strong>Peludos e Protegidos</strong><span>Categoria: Animais</span></div>
                     <div class="informacoes-extras"><strong>NECESSIDADE:</strong><span>Falta de ração.</span></div>
                 </a>
             </section>
 
+            <aside class="coluna-imagens">
+                <img src="../IMG/3saude.jpg" alt="Ação 5">
+                <img src="../IMG/4saude.jpg" alt="Ação 6">
+                <img src="../IMG/5saude.jpg" alt="Ação 7">
+                <img src="../IMG/6saude.jpg" alt="Ação 8">
+            </aside>
         </div>
     </main>
 
@@ -99,7 +106,7 @@
         </div>
     </footer>
 
-    <script src="../JS/regioes.js"></script>
+    <script src="../JS/categorias.js"></script>
 </body>
 
 </html>

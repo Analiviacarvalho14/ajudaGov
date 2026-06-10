@@ -2,42 +2,37 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     color: #003366;
 }
 
-/* --- CABEÇALHO --- */
-header {
+/* --- TOPO / CABEÇALHO --- */
+.topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
     border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
 }
 
-
- .linha-vertical {
-   border-left: 3px solid black; /* Define a linha */
-   height: 200px; /* Altura da linha */
-   left: 50%; /* Centraliza horizontalmente */
- }
-
-.search-bar input {
+.busca input {
     width: 350px;
     padding: 10px 25px;
     border-radius: 30px;
-    border: 1.5px solid #000;
+    border: 1.5px solid #ccc;
     font-size: 1rem;
     outline: none;
 }
 
-.user-menu {
+.usuario {
     font-weight: 500;
+    color: #13315c;
     cursor: pointer;
 }
 
 /* --- TÍTULO --- */
-.main-title {
+.titulo {
     text-align: center;
     margin: 40px 0;
     font-size: 1.5rem;
@@ -45,8 +40,8 @@ header {
     color: #2c5282;
 }
 
-/* --- LAYOUT PRINCIPAL --- */
-.container {
+/* --- LAYOUT CENTRAL --- */
+.caixa-principal {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
@@ -54,95 +49,183 @@ header {
     gap: 30px;
 }
 
-/* --- BARRA LATERAL --- */
-.sidebar {
+/* --- BARRA LATERAL E LEGENDA --- */
+.lateral {
     width: 220px;
 }
 
-.filter-group {
-    background-color: #f5f7f9;
+.legenda {
+    background-color: #ffffff;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 8px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.sidebar h3 {
+.lateral h3 {
     margin: 0 0 10px 0;
     font-size: 1.1rem;
     color: #2c5282;
 }
 
-.sidebar ul {
+.lateral ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.sidebar li {
-    padding: 6px 0;
+.lateral li {
+    padding: 6px 8px;
     font-size: 0.95rem;
     cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
 }
 
-/* --- GRADE DE ONGS --- */
-.content {
+.lateral li:hover {
+    background-color: #f0f4f8;
+    transform: translateX(4px);
+}
+
+.lateral li.ativo {
+    background-color: #e2e8f0;
+    font-weight: bold;
+}
+
+/* --- ÁREA DOS CARDS --- */
+.conteudo {
     flex: 1;
 }
 
-.grid-ongs {
-    display: grid;
-    gap: 20px;
+.lista-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     margin-bottom: 40px;
 }
 
-.card-ong {
-    background-color: #2c6eb5;
-    color: white;
-    width: 100%;
-    border-radius: 25px;
+/* Estrutura principal do Card horizontal */
+.card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 12px 20px;
+    gap: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
+.card:hover {
+    transform: translateY(-2px);
 }
-.card-red{
-    border-color: red;
+
+/* Cores das bordas externas e efeitos de brilho */
+.card.card-vermelho { 
+    border: 2px solid #df2935; 
+    box-shadow: 0 4px 12px rgba(223, 41, 53, 0.2); 
 }
-.card-header {
-    font-size: 1.4rem;
+.card.card-laranja { 
+    border: 2px solid #e5a93b; 
+    box-shadow: 0 4px 12px rgba(229, 169, 59, 0.2); 
+}
+.card.card-amarelo { 
+    border: 2px solid #f4d35e; 
+    box-shadow: 0 4px 12px rgba(244, 211, 94, 0.2); 
+}
+.card.card-verde { 
+    border: 2px solid #3bceac; 
+    box-shadow: 0 4px 12px rgba(59, 206, 172, 0.2); 
+}
+
+/* Ícone redondo preto com a casa */
+.card-icone {
+    background-color: #000000;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+/* Bloco do meio (Nome e Descrição) */
+.card-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 8px 15px;
+}
+
+.card-info strong {
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.card-info span {
+    font-size: 0.9rem;
+    color: #777777;
+    font-style: italic;
+}
+
+/* Bloco da direita (Necessidades) */
+.card-necessidades {
+    flex: 1.5;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 8px 15px;
+}
+
+.card-necessidades small {
     font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 0.75rem;
+    color: #000000;
+    display: block;
+    margin-bottom: 2px;
 }
 
-.urgent-projects {
+.card-necessidades p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666666;
+    font-style: italic;
+}
+
+.rodape-lista {
     text-align: center;
     border-top: 1px solid #eee;
     padding-top: 20px;
     font-size: 1.3rem;
+    color: #2c5282;
 }
 
 /* --- RESPONSIVIDADE --- */
-
-/* Tablets (até 992px) */
 @media (max-width: 992px) {
-    .container {
+    .caixa-principal {
         flex-direction: column;
     }
-    .sidebar {
+    .lateral {
         width: 100%;
-    }
-    .grid-ongs {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Celulares (até 600px) */
-@media (max-width: 600px) {
-    header {
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .card-icone {
+        align-self: center;
+    }
+    .topo {
         flex-direction: column;
         gap: 15px;
     }
-    .search-bar input {
+    .busca input {
         width: 100%;
-    }
-    .grid-ongs {
-        grid-template-columns: 1fr;
     }
 }
