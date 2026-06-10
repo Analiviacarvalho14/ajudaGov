@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda Gov - Mockup</title>
+    <link rel="stylesheet" href="../CSS/paginaDeEntrada.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../IMG/logoAjudaGov.png" width="150" height="60" alt="Logo Ajuda Gov">
+        <div class="busca">
+            <div class="busca-input">
+                <input type="text" placeholder="Pesquisa ONG" id="input-busca">
+            </div>
+            <ul id="lista-sugestoes" class="sugestoes">
+                <li onclick="location.href='saude.html'">🕒 Saúde</li>
+                <li onclick="location.href='doacao.html'">🕒 Doação</li>
+                <li onclick="location.href='cadastro.html'">🕒 Cadastrar</li>
+            </ul>
+        </div>
+        <div class="user-menu">Entre na sua conta 👤</div>
+    </header>
+
+    <main>
+        <hr>
+        <h2 class="titulo-principal">APOIO E CONEXÃO PARA VOCÊ</h2>
+        <hr>
+        <br>
+        <br>
+        <div class="container">
+            <aside class="sidebar">
+                <section class="filtro">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><a href="saude.html">Saúde ❤️</a></li>
+                        <li><a href="criancas.html">Crianças 🧒</a></li>
+                        <li><a href="idosos.html">Idosos 👴</a></li>
+                        <li><a href="animais.html">Animais 🐾</a></li>
+                    </ul>
+                </section>
+
+                <section class="filtro">
+                    <h3>Regiões</h3>
+                    <ul>
+                        <li><a href="norte.html">Norte</a></li>
+                        <li><a href="nordeste.html">Nordeste</a></li>
+                        <li><a href="centro-oeste.html">Centro-oeste</a></li>
+                        <li><a href="sudeste.html">Sudeste</a></li>
+                        <li><a href="sul.html">Sul</a></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <section class="conteudo">
+                <div class="grid-ongs">
+ 
+                    <div class="card-ong">
+                        <div class="card-header">👤 ONG 1</div>
+                        <p>Descrição da ONG</p>
+                    </div>
+                    <div class="card-ong">
+                        <div class="card-header">👤 ONG 2</div>
+                        <p>Descrição da ONG</p>
+                    </div>
+                    <div class="card-ong">
+                        <div class="card-header">👤 ONG 3</div>
+                        <p>Descrição da ONG</p>
+                    </div>
+                    <div class="card-ong">
+                        <div class="card-header">👤 ONG 4</div>
+                        <p>Descrição da ONG</p>
+                    </div>
+                    <div class="card-ong">
+                        <div class="card-header">👤 ONG 5</div>
+                        <p>Descrição da ONG</p>
+                    </div>
+                    <div class="card-ong">
+                        <div class="card-header">👤 ONG 6</div>
+                        <p>Descrição da ONG</p>
+                    </div>
+                    <div class="card-ong">
+                        <div class="card-header">👤 ONG 7</div>
+                        <p>Descrição da ONG</p>
+                    </div>
+                    <div class="card-ong">
+                        <div class="card-header">👤 ONG 8</div>
+                        <p>Descrição da ONG</p>
+                    </div>
+                    <div class="card-ong">
+                        <div class="card-header">👤 ONG 9</div>
+                        <p>Descrição da ONG</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <hr>
+        <h3 class="projetos-urgentes">Projetos urgentes</h3>
+        <br>
+        <br>
+        <hr>
+        <div class="container urgentes">
+            <aside class="sidebar-legenda">
+                <section class="filtro">
+                    <h3>Legenda</h3>
+                    <ul class="lista-legenda">
+                        <li>🔴 Perigo imediato</li>
+                        <li>🟠 Perigo</li>
+                        <li>🟡 Atenção</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <section class="conteudo-urgentes">
+                <div class="card-urgente perigo-alto">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone">
+                    <div class="info-principal"><strong>Nome do Projeto</strong><span>Descrição breve</span></div>
+                    <div class="info-necessidades"><strong>NECESSIDADES:</strong><span>Roupa, dinheiro, comida</span></div>
+                </div>
+
+                <div class="card-urgente perigo-medio">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone">
+                    <div class="info-principal"><strong>Nome do Projeto</strong><span>Descrição breve</span></div>
+                    <div class="info-necessidades"><strong>NECESSIDADES:</strong><span>Móveis, voluntários, água</span></div>
+                </div>
+
+                <div class="card-urgente perigo-baixo">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8280/8280440.png" width="64" height="64" alt="Ícone">
+                    <div class="info-principal"><strong>Nome do Projeto</strong><span>Descrição breve</span></div>
+                    <div class="info-necessidades"><strong>NECESSIDADES:</strong><span>Produtos de higiene, ração</span></div>
+                </div>
+
+                <button class="btn-mais">Mostrar mais</button>
+            </section>
+        </div>
+    </main>
+
+    <footer class="rodape-gov">
+        <div class="container-rodape">
+            <div class="coluna-logo">
+                <h1 class="logo-gov">gov.br</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>SERVIÇOS</h2>
+                <ul>
+                    <li><a href="/buscar-servicos">Buscar serviços por</a></li>
+                    <li><a href="/servicos-publico">Serviços por público alvo</a></li>
+                </ul>
+            </div>
+            <div class="coluna-links">
+                <h2>TEMAS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="/orcamento">Orçamento Nacional</a></li>
+                    <li><a href="/redes-atendimento">Redes de Atendimento</a></li>
+                    <li><a href="/lgpd">Proteção de Dados Pessoais</a></li>
+                </ul>
+            </div>
+            <div class="coluna-links">
+                <h2>NOTÍCIAS</h2>
+                <ul>
+                    <li><a href="/noticias-saude">Saúde</a></li>
+                    <li><a href="/noticias-ciencia">Ciência e Tecnologia</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const inputBusca = document.getElementById('input-busca');
+        const listaSugestoes = document.getElementById('lista-sugestoes');
+        inputBusca.addEventListener('focus', () => { listaSugestoes.style.display = 'block'; });
+        document.addEventListener('click', (e) => {
+            if (!inputBusca.contains(e.target) && !listaSugestoes.contains(e.target)) {
+                listaSugestoes.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

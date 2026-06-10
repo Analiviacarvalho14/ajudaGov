@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda Gov - Mockup</title>
+    <link rel="stylesheet" href="../CSS/cateCrianca.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda GOV - Projetos Urgentes</title>
+    
+    <!-- CONEXÃO COM O ARQUIVO CSS -->
+    <link rel="stylesheet" href="../css/cateCrianca.css">
+    <link rel="stylesheet" href="../css/rodapeGov.css">
+</head>
+
+<body>
+    <header>
+        <img src="../img/logoAjudaGov.png" width="150" height="60" alt="Logo">
+        <div class="barra-pesquisa">
+            <input type="text" placeholder="Pesquisa ONG">
+        </div>
+        <div class="menu-usuario">Entre na sua conta 👤</div>
+    </header>
+
+    <main>
+        <hr>
+        <h2 class="titulo-principal">Projetos Sociais e Urgentes</h2>
+        <hr>
+
+        <nav class="navegacao-categorias">
+            <button class="botao-categoria ativo" data-filtro="todos">Todos</button>
+            <button class="botao-categoria" data-filtro="crianca">👶 Crianças</button>
+            <button class="botao-categoria" data-filtro="saude">🏥 Saúde</button>
+            <button class="botao-categoria" data-filtro="idoso">👴 Idosos</button>
+            <button class="botao-categoria" data-filtro="animal">🐾 Animais</button>
+        </nav>
+
+        <div class="bloco-conteudo">
+            <aside class="coluna-imagens">
+                <img src="../IMG/1saude.jpg" alt="Ação 1">
+                <img src="../IMG/1crianca.jpg" alt="Ação 2">
+            </aside>
+
+            <section class="lista-ongs">
+                <!-- Cartão Criança -->
+                <a href="pagina-ong-crianca.html" class="cartao-ong urgencia-alta" data-categoria="crianca">
+                    <img src="https://flaticon.com" width="64" height="64" alt="Ícone">
+                    <div class="informacoes-principais"><strong>Orfanato Esperança</strong><span>Categoria: Crianças</span></div>
+                    <div class="informacoes-extras"><strong>NECESSIDADE:</strong><span>Arrecadação de leite.</span></div>
+                </a>
+
+                <!-- Cartão Saúde -->
+                <a href="pagina-ong-saude.html" class="cartao-ong urgencia-media" data-categoria="saude">
+                    <img src="https://flaticon.com" width="64" height="64" alt="Ícone">
+                    <div class="informacoes-principais"><strong>Hospital do Bem</strong><span>Categoria: Saúde</span></div>
+                    <div class="informacoes-extras"><strong>INFO:</strong><span>Doação de sangue.</span></div>
+                </a>
+
+                <!-- Cartão Idoso -->
+                <a href="pagina-ong-idoso.html" class="cartao-ong urgencia-baixa" data-categoria="idoso">
+                    <img src="https://flaticon.com" width="64" height="64" alt="Ícone">
+                    <div class="informacoes-principais"><strong>Lar dos Avós</strong><span>Categoria: Idosos</span></div>
+                    <div class="informacoes-extras"><strong>INFO:</strong><span>Voluntários para recreação.</span></div>
+                </a>
+
+                <!-- Cartão Animal -->
+                <a href="pagina-ong-animal.html" class="cartao-ong urgencia-alta" data-categoria="animal">
+                    <img src="https://flaticon.com" width="64" height="64" alt="Ícone">
+                    <div class="informacoes-principais"><strong>Peludos e Protegidos</strong><span>Categoria: Animais</span></div>
+                    <div class="informacoes-extras"><strong>NECESSIDADE:</strong><span>Falta de ração.</span></div>
+                </a>
+            </section>
+
+            <aside class="coluna-imagens">
+                <img src="../IMG/2crianca.jpg" alt="Ação 3">
+                <img src="../IMG/3crianca.jpg" alt="Ação 4">
+            </aside>
+        </div>
+    </main>
+
+    <!-- CONEXÃO COM O ARQUIVO JAVASCRIPT (SEMPRE NO FINAL DO BODY) -->
+    <script src="../JS/categorias.js"></script>
+</body>
+</html>
