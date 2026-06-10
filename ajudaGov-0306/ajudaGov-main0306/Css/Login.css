@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  height: 100vh;
+  margin: 0;
+}
+
+.conteudo-pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-principal {
+  width: 300px; 
+  margin-bottom: 20px;
+}
+
+.cartao-login {
+  background: white;
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.titulo-user {
+  text-align: center;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c5282;
+  border-bottom: 1px solid #ccc;
+  background-color: #fdfdfd;
+}
+
+.caixa-entrada {
+  padding: 20px;
+  text-align: center;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 5px;
+}
+
+.campo label {
+  color: #4a90e2;
+  font-size: 18px;
+  width: 70px;
+  text-align: left;
+}
+
+.campo input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 18px;
+  color: #333;
+}
+
+#caixa-validacao {
+  text-align: left;
+  margin-top: 10px;
+  padding: 5px;
+  display: none;
+}
+
+.regra {
+  font-size: 12px;
+  color: #cc0000; 
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.regra-valida {
+  color: #28a745 !important; 
+}
+
+.rodape-ajuda {
+  text-align: left;
+  padding: 15px 5px 5px 5px;
+}
+
+.rodape-ajuda a {
+  color: #4a90e2;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.botao-entrar {
+  background-color: #337ab7;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.botao-entrar:hover {
+  background-color: #286090;
+}
