@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações</title>
+    <link rel="stylesheet" href="../Css/qntDoacao.css">
+</head>
+<body>
+    <main>
+    <h1 class="page-title">Apoio e Conexão para Você - Doações</h1>
+
+    <div class="container-doacao">
+        <div class="grid-2">
+            
+            <div class="grid-col">
+                <h3 class="donation-subtitle">Estamos Precisando</h3>
+                <div class="textarea-wrapper">
+                    <textarea id="necessidadesOng" class="input-control donation-textarea" 
+                        placeholder="O que estão precisando? Escreva de forma objetiva (Ex: 10 pacotes de arroz, 5 casacos M)." 
+                        maxlength="300"></textarea>
+                    <div class="char-counter"><span id="counter">0</span>/300 caracteres</div>
+                </div>
+            </div>
+
+            <div class="grid-col">
+                <h3 class="donation-subtitle">Doar</h3>
+                <div class="donation-box">
+                    <div class="buttons-grid">
+                        <button type="button" class="btn-donate-option">Dinheiro</button>
+                        <button type="button" class="btn-donate-option">Roupa</button>
+                        <button type="button" class="btn-donate-option">Alimento</button>
+                        <button type="button" class="btn-donate-option">Outra</button>
+                    </div>
+                    <div class="submit-wrapper">
+                        <button type="button" class="btn-action btn-submit-donation">Doar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+<script src="../JS/qntDoacao.js"></script>
+</body>
+</html>
