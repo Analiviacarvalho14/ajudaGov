@@ -1,0 +1,39 @@
+.rodape-gov {
+  background-color: #13315C; 
+  color: #FFFFFF;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.container-rodape {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.coluna-links h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.coluna-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.coluna-links li {
+  margin-bottom: 10px;
+}
+
+.coluna-links a {
+  color: #FFFFFF;
+  text-decoration: none; 
+  font-size: 14px;
+}
+
+.coluna-links a:hover {
+  text-decoration: underline; 
+}
