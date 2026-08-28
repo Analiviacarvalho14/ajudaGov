@@ -1,0 +1,106 @@
+/* NOVO: Estilo da barra onde ficam os botões de filtros */
+.navegacao-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0 10px 0;
+    flex-wrap: wrap;
+}
+
+.botao-categoria {
+    background-color: #f0f4fa;
+    color: var(--azul-card);
+    border: 2px solid var(--azul-card);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.botao-categoria:hover {
+    background-color: var(--azul-card);
+    color: white;
+}
+
+.botao-categoria.ativo {
+    background-color: var(--azul-card);
+    color: white;
+    box-shadow: 0 4px 8px rgba(45, 93, 167, 0.3);
+}
+
+/* Estrutura simétrica do conteúdo */
+.bloco-conteudo {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 40px; 
+    padding: 20px;
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+.coluna-imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-shrink: 0; 
+    width: 180px;   
+}
+
+.coluna-imagens img {
+    width: 100%;
+    height: 130px;  
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.lista-ongs {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-left: 0; 
+}
+
+/* Cartões das ONGs */
+.cartao-ong {
+    display: flex;
+    width: 100%;
+    max-width: 800px; 
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    align-items: center;
+    gap: 20px;
+    border: 3px solid transparent;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    text-decoration: none; 
+    color: inherit; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* NOVO: Classe que o JS ativa para esconder o cartão suavemente */
+.cartao-ong.escondido {
+    display: none !important;
+}
+
+.urgencia-alta { border-color: var(--vermelho-perigo); box-shadow: 0 0 10px rgba(217, 83, 79, 0.1); }
+.urgencia-media { border-color: var(--laranja-perigo); }
+.urgencia-baixa { border-color: var(--amarelo-atencao); }
+
+.informacoes-principais, .informacoes-extras {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd; 
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.informacoes-principais strong, .informacoes-extras strong { font-size: 14px; margin-bottom: 4px; }
+.informacoes-principais span, .informacoes-extras span { font-style: italic; color: #666; font-size: 13px; }
