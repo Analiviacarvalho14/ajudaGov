@@ -1,9 +1,9 @@
-# AjudaGov
-![Logo do ajuda gov](logoAjudaGov.png)
+# Ajuda+
+![Logo do ajuda+](logoAjudaGov.png)
 
-## AjudaGov team
+## Ajuda+ team
 
- O Ajuda Gov é uma plataforma digital que centraliza instituições de caridade em perfis detalhados e transparentes, promovendo a confiança dos doadores por meio de extratos públicos que exibem toda a movimentação financeira de receitas e despesas.
+ O Ajuda + é uma plataforma digital que centraliza instituições de caridade em perfis detalhados e transparentes, promovendo a confiança dos doadores por meio de extratos públicos que exibem toda a movimentação financeira de receitas e despesas.
  
 ## Integrantes:
 - Emanuella - Líder: Full-stack & BD;
