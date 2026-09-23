@@ -1,5 +1,5 @@
 # Ajuda+
-![Logo do ajuda+](logoAjudaGov.png)
+![Logo do ajuda+](ajuda+logo.png)
 
 ## Ajuda+ team
 
